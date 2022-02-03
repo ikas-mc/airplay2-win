@@ -198,10 +198,10 @@ xcopy /y /e $(SolutionDir)external\plist\lib\$(PlatformTarget)\*.dll $(SolutionD
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\FgAirplayServer.cpp" />
+    <ClInclude Include="FgAirplayServer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FgAirplayServer.h" />
+    <ClCompile Include="FgAirplayServer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
