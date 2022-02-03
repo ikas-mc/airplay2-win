@@ -12,7 +12,9 @@ This project is only used as a library
 
 You can refer to the original project to use  https://github.com/fingergit/airplay2-win
 
-All mDNS protocol related libraries are removed, you can use win32 mDNS api    
+All mDNS protocol related libraries are removed,  use win32 mDNS api  instead
+
+https://github.com/microsoft/Xbox-GDK-Samples/tree/main/Samples/Live/mDNS_Desktop
 
 ## Reference
 
