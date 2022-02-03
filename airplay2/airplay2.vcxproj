@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -105,7 +105,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>lib\ed25519;lib\fdk-aac\libAACdec\include;lib\fdk-aac\libAACenc\include;lib\fdk-aac\libArithCoding\include;lib\fdk-aac\libDRCdec\include;lib\fdk-aac\libFDK\include;lib\fdk-aac\libMpegTPDec\include;lib\fdk-aac\libMpegTPEnc\include;lib\fdk-aac\libPCMutils\include;lib\fdk-aac\libSACdec\include;lib\fdk-aac\libSACenc\include;lib\fdk-aac\libSBRdec\include;lib\fdk-aac\libSBRenc\include;lib\fdk-aac\libSYS\include;lib\fdk-aac\win32;$(SolutionDir)external;lib;lib\crypto;lib\curve25519;lib\playfair;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>lib\ed25519;lib\fdk-aac\libAACdec\include;lib\fdk-aac\libAACenc\include;lib\fdk-aac\libArithCoding\include;lib\fdk-aac\libDRCdec\include;lib\fdk-aac\libFDK\include;lib\fdk-aac\libMpegTPDec\include;lib\fdk-aac\libMpegTPEnc\include;lib\fdk-aac\libPCMutils\include;lib\fdk-aac\libSACdec\include;lib\fdk-aac\libSACenc\include;lib\fdk-aac\libSBRdec\include;lib\fdk-aac\libSBRenc\include;lib\fdk-aac\libSYS\include;lib\fdk-aac\win32;$(SolutionDir)external;lib;lib\crypto;lib\curve25519;lib\playfair;include;$(SolutionDir)external\libplist\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -408,7 +408,6 @@
     <ClInclude Include="lib\pairing.h" />
     <ClInclude Include="lib\playfair\omg_hax.h" />
     <ClInclude Include="lib\playfair\playfair.h" />
-    <ClInclude Include="lib\plist.h" />
     <ClInclude Include="lib\raop_buffer.h" />
     <ClInclude Include="lib\raop_handlers.h" />
     <ClInclude Include="lib\raop_rtp.h" />
@@ -421,8 +420,6 @@
     <ClInclude Include="lib\utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="airplay2.cpp" />
-    <ClCompile Include="compat.c" />
     <ClCompile Include="lib\aes2.c" />
     <ClCompile Include="lib\aes_ctr.c" />
     <ClCompile Include="lib\airplay.c" />
@@ -639,7 +636,6 @@
     <ClCompile Include="lib\playfair\omg_hax.c" />
     <ClCompile Include="lib\playfair\playfair.c" />
     <ClCompile Include="lib\playfair\sap_hash.c" />
-    <ClCompile Include="lib\plist.c" />
     <ClCompile Include="lib\raop.c" />
     <ClCompile Include="lib\raop_buffer.c" />
     <ClCompile Include="lib\raop_rtp.c" />

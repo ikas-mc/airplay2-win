@@ -52,7 +52,7 @@ extern "C" {
 	AIRPLAY_API void airplay_set_log_level(airplay_t *airplay, int level);
 	AIRPLAY_API void airplay_set_log_callback(airplay_t *airplay, airplay_log_callback_t callback, void *cls);
 
-	AIRPLAY_API int airplay_start(airplay_t *airplay, unsigned short *port, const char *hwaddr, int hwaddrlen, const char *password);
+	AIRPLAY_API int airplay_start(airplay_t *airplay, unsigned short *port, const unsigned char *hwaddr, int hwaddrlen, const char *password);
 	AIRPLAY_API int airplay_is_running(airplay_t *airplay);
 	AIRPLAY_API void airplay_stop(airplay_t *airplay);
 

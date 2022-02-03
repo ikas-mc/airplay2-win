@@ -21,39 +21,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\FgAirplayServer.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Airplay2Export.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CAutoLock.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FgAirplayChannel.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Airplay2Def.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Airplay2Head.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="FgAirplayServer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CAutoLock.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FgAirplayChannel.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

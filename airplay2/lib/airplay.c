@@ -41,7 +41,7 @@ struct airplay_s
 	httpd_t *httpd;
 	//rsakey_t *rsakey;
 
-	httpd_t *mirror_server;
+	//httpd_t *mirror_server;
 
 	/* Hardware address information */
 	unsigned char hwaddr[MAX_HWADDR_LEN];
@@ -384,7 +384,7 @@ airplay_init(int max_clients, airplay_callbacks_t *callbacks, const char *pemkey
 	airplay_t *airplay;
 	pairing_t* pairing;
 	httpd_t *httpd;
-	httpd_t *mirror_server;
+	//httpd_t *mirror_server;
 	//rsakey_t *rsakey;
 	httpd_callbacks_t httpd_cbs;
 
@@ -433,13 +433,13 @@ airplay_init(int max_clients, airplay_callbacks_t *callbacks, const char *pemkey
 		return NULL;
 	}
 
-	mirror_server = httpd_init(airplay->logger, &httpd_cbs, max_clients);
-	if (!mirror_server)
-	{
-		free(httpd);
-		free(airplay);
-		return NULL;
-	}
+	//mirror_server = httpd_init(airplay->logger, &httpd_cbs, max_clients);
+	//if (!mirror_server)
+	//{
+	//	free(httpd);
+	//	free(airplay);
+	//	return NULL;
+	//}
 
 	memcpy(&airplay->callbacks, callbacks, sizeof(airplay_callbacks_t));
 
@@ -456,7 +456,7 @@ airplay_init(int max_clients, airplay_callbacks_t *callbacks, const char *pemkey
 	airplay->httpd = httpd;
 	//airplay->rsakey = rsakey;
 
-	airplay->mirror_server = mirror_server;
+	//airplay->mirror_server = mirror_server;
 
 	return airplay;
 }
@@ -501,7 +501,7 @@ airplay_set_log_callback(airplay_t *airplay, airplay_log_callback_t callback, vo
 	logger_set_callback(airplay->logger, callback, cls);
 }
 
-int airplay_start(airplay_t *airplay, unsigned short *port, const char *hwaddr,
+int airplay_start(airplay_t *airplay, unsigned short *port, const unsigned char *hwaddr,
 	int hwaddrlen, const char *password)
 {
 	int ret;
@@ -534,7 +534,7 @@ int airplay_start(airplay_t *airplay, unsigned short *port, const char *hwaddr,
 	if (ret != 1) return ret;
 
 	mirror_port = 7100;
-	ret = httpd_start(airplay->mirror_server, &mirror_port);
+	//ret = httpd_start(airplay->mirror_server, &mirror_port);
 	return ret;
 }
 
@@ -543,7 +543,7 @@ void airplay_stop(airplay_t *airplay)
 	assert(airplay);
 
 	httpd_stop(airplay->httpd);
-	httpd_stop(airplay->mirror_server);
+	//httpd_stop(airplay->mirror_server);
 }
 
 void airplay_destroy(airplay_t* airplay) {
@@ -551,7 +551,7 @@ void airplay_destroy(airplay_t* airplay) {
 		airplay_stop(airplay);
 		//rsakey_destroy(airplay->rsakey);
 		httpd_destroy(airplay->httpd);
-		httpd_destroy(airplay->mirror_server);
+		//httpd_destroy(airplay->mirror_server);
 		pairing_destroy(airplay->pairing);
 		logger_destroy(airplay->logger);
 		free(airplay);

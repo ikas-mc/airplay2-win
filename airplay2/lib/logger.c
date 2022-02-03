@@ -105,6 +105,8 @@ logger_utf8_to_local(const char *str)
 void
 logger_log(logger_t *logger, int level, const char *fmt, ...)
 {
+#if ENABLE_LOG
+
 	char buffer[4096];
 	va_list ap;
 
@@ -135,5 +137,6 @@ logger_log(logger_t *logger, int level, const char *fmt, ...)
 			fprintf(stderr, "%s\n", buffer);
 		}
 	}
+#endif // ENABLE_LOG
 }
 

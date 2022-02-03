@@ -816,9 +816,6 @@
     <ClInclude Include="lib\pairing.h">
       <Filter>airplay</Filter>
     </ClInclude>
-    <ClInclude Include="lib\plist.h">
-      <Filter>airplay</Filter>
-    </ClInclude>
     <ClInclude Include="lib\raop_buffer.h">
       <Filter>airplay</Filter>
     </ClInclude>
@@ -875,9 +872,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="airplay2.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="lib\crypto\aes.c">
       <Filter>crypto</Filter>
     </ClCompile>
@@ -1496,9 +1490,6 @@
     <ClCompile Include="lib\pairing.c">
       <Filter>airplay</Filter>
     </ClCompile>
-    <ClCompile Include="lib\plist.c">
-      <Filter>airplay</Filter>
-    </ClCompile>
     <ClCompile Include="lib\raop.c">
       <Filter>airplay</Filter>
     </ClCompile>
@@ -1537,9 +1528,6 @@
     </ClCompile>
     <ClCompile Include="lib\base64.c">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="compat.c">
-      <Filter>airplay</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

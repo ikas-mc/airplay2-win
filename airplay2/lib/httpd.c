@@ -41,7 +41,7 @@ struct httpd_s {
 	http_connection_t *connections;
 
 	/* These variables only edited mutex locked */
-	int running;
+	volatile int running;
 	int joined;
 	thread_handle_t thread;
 	mutex_handle_t run_mutex;
@@ -174,9 +174,9 @@ httpd_remove_connection(httpd_t *httpd, http_connection_t *connection)
 		http_request_destroy(connection->request);
 		connection->request = NULL;
 	}
-	httpd->callbacks.conn_destroy(connection->user_data);
 	shutdown(connection->socket_fd, SHUT_WR);
 	closesocket(connection->socket_fd);
+	httpd->callbacks.conn_destroy(connection->user_data);
 	connection->connected = 0;
 	httpd->open_connections--;
 }
