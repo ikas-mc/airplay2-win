@@ -837,9 +837,6 @@
     <ClInclude Include="include\airplay.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\dnssd.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="include\raop.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -1506,9 +1503,6 @@
       <Filter>airplay</Filter>
     </ClCompile>
     <ClCompile Include="lib\airplay.c">
-      <Filter>airplay</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\dnssd.c">
       <Filter>airplay</Filter>
     </ClCompile>
     <ClCompile Include="lib\utils.c">

@@ -152,7 +152,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\airplay.h" />
-    <ClInclude Include="include\dnssd.h" />
     <ClInclude Include="include\raop.h" />
     <ClInclude Include="include\stream.h" />
     <ClInclude Include="lib\aes.h" />
@@ -433,7 +432,6 @@
     <ClCompile Include="lib\crypto\sha1.c" />
     <ClCompile Include="lib\curve25519\curve25519-donna.c" />
     <ClCompile Include="lib\digest.c" />
-    <ClCompile Include="lib\dnssd.c" />
     <ClCompile Include="lib\ed25519\add_scalar.c" />
     <ClCompile Include="lib\ed25519\fe.c" />
     <ClCompile Include="lib\ed25519\ge.c" />
