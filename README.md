@@ -23,5 +23,5 @@ Compared with the original project, this project does not improve or update the 
 - [AirplayServer](https://github.com/KqSMea8/AirplayServer)
 - [xindawn-windows-airplay-mirroring-sdk](https://github.com/xindawndev/xindawn-windows-airplay-mirroring-sdk)
 - [airplay2-win](https://github.com/fingergit/airplay2-win)
-- [airplay](https://github.com/FD-/RPiPla)
+- [RPiPlay](https://github.com/FD-/RPiPlay)
 
